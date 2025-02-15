@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Jejeee Thida 😍</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .question {
+            background-color: #ff4081;
+            padding: 15px 30px;
+            border-radius: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .yes:hover {
+            background-color: #45a049;
+        }
+
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .no:hover {
+            background-color: #e53935;
+        }
+
+        .character {
+            margin-top: 20px;
+            width: 120px;
+            animation: bounce 1.5s infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .character:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="question">Do you need a Gift? 🥺</div>
+        <div class="question">If you click No I'm Crying!! 😭😭</div>
+        <img class="character"
+            src="https://i.pinimg.com/originals/c6/11/8f/c6118fcef4f5a45a5dc261017be6d9a4.gif"
+            alt="Anime Character" id="characterImage">
+        <div class="buttons">
+            <button class="btn yes" onclick="window.location.href='happy.html'">Yes</button>
+            <button class="btn no" id="noButton">No</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("noButton").addEventListener("click", function () {
+            // Change the image when the "No" button is clicked
+            document.getElementById("characterImage").src = "https://media.tenor.com/V1799GQji_0AAAAM/crying-panda-bear.gif";  // New image URL
+            // Optional: Add any other actions when "No" is clicked
+            this.disabled = true;  // Disables the "No" button after it's clicked
+        });
+
+    </script>
+</body>
+
+</html>
